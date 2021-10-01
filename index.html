@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ad55ceb5b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <!-- Modifying the table ones the body is loaded using onload="modifyTable()" in case there is something in the array when the page is loaded -->
+  <body onload="modifyTable()">
+    <h1>Contact list</h1>
+    <!-- ADD CONTACT STARTS -->
+    <div class="innerContainer">
+      <h2>Add contact</h2>
+      <form class="contactForm">
+        <label for="name">Name: </label><br />
+        <input type="text" id="name" name="name" required /><br />
+        <label for="email">Email: </label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="phone">Phone: </label><br />
+        <input type="tel" id="phone" name="phone" /><br />
+        <label for="company">Company: </label><br />
+        <input type="text" id="company" name="company" /><br /><br />
+        <button
+          type="button"
+          onclick="addContact(document.getElementById('name').value,document.getElementById('email').value,document.getElementById('phone').value,document.getElementById('company').value)"
+        >
+          Add Contact</button
+        ><br /><br />
+      </form>
+    </div>
+    <!-- ADD CONTACT ENDS -->
+
+    <!-- CONTACT LIST STARTS -->
+    <table class="contactList" id="contactList">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Company</th>
+          <th>Delete/Edit</th>
+        </tr>
+      </thead>
+      <!-- Here the data from the array is imported -->
+    </table>
+    <!-- CONTACT LIST STARTS -->
+
+    <!-- EDIT CONTACT MODAL STARTS HERE -->
+    <div class="modal-container">
+      <!-- Modal is created with javascript using openModal() -->
+    </div>
+    <!-- EDIT CONTACT MODAL ENDS HERE -->
+
+    <img src="loading.svg" class="loading" />
+    <!-- call main.js -->
+    <script src="main.js"></script>
+  </body>
+</html>
